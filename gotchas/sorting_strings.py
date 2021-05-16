@@ -1,9 +1,18 @@
-# list.sort() or sorted() use < comparisons between items.
-# ordinals of characters in strings are compared.
-# solution: specifying key=str.lower in a sorting function/method
+"""
+Sortings strings may return seemingly unexpected results.
+But strings consist of characters, and numeric values - check ord() - of these
+characters are compared.
+list.sort() or sorted() use < comparisons, and characters of string values are
+compared one by one.
+
+Solution: specifying key=str.lower in a sorting function/method
+
+See also: https://docs.python.org/3/howto/sorting.html
+"""
 
 
 def sort_strings(values):
+    """Sort a list of strings with and without key parameter."""
     print(f'default\n{sorted(values)}')
     result = sorted(values, key=str.lower)
     print(f'key=str.lower\n{result}\n')
