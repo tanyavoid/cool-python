@@ -1,5 +1,9 @@
-# it's possible to use non-ASCII characters in identifiers.
-# best (only?) suitable for educational purposes.
+"""
+It's possible to use non-ASCII characters in identifiers.
+
+Names of variables, classes, or functions can use Unicode characters.
+The feature is best suitable for educational purposes.
+"""
 
 
 class Кошачьи:
@@ -15,7 +19,7 @@ class Кошачьи:
 
 
 class БольшиеКошки(Кошачьи):
-    подсемейство_латинский = 'Felinae'
+    подсемейство_латинский = 'Pantherinae'
 
     @property
     def подсемейство(self):
