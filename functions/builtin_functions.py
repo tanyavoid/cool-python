@@ -19,3 +19,25 @@ builtin_function_names = [
 
 assert 'id' in builtin_function_names
 assert 'abs' in builtin_function_names
+
+
+# a good portion of these builtins devoted to type conversion
+# or allow to initialize empty values
+dict()
+list()
+tuple()
+str()
+float()
+int()
+set()
+frozenset()
+# memoryview()
+# iter()
+
+# making truth testing (converting a given value to True or False)
+bool()
+
+# and checking for type
+type()
+isinstance()
+
