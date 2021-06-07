@@ -17,12 +17,14 @@ builtin_function_names = [
     if isinstance(obj, types.BuiltinFunctionType)
 ]
 
-assert 'id' in builtin_function_names
-assert 'abs' in builtin_function_names
+assert 'hex' in builtin_function_names
+assert 'open' in builtin_function_names
 
+print(builtin_function_names)  # everyone's favourite function!
+dir()  # wants to be everyone's favourite
 
-# a good portion of these builtins devoted to type conversion
-# or allow to initialize empty values
+# a good portion of the builtins is devoted to type conversion
+# or initializing empty values of these types (just assign variables to them)
 dict()
 list()
 tuple()
@@ -31,13 +33,41 @@ float()
 int()
 set()
 frozenset()
-# memoryview()
-# iter()
 
-# making truth testing (converting a given value to True or False)
-bool()
 
-# and checking for type
-type()
-isinstance()
+# let's try some of the functions on simple examples
+veggies = ['carrot', 'pepper', 'radish', 'pea', 'potato']
+numbers = 2, 4, 15, 150, 10, 0
 
+bool(veggies)  # True; making truth testing: our list is not empty
+len(numbers)  # length of a iterable
+
+# checking for type
+assert type(veggies) is list
+assert isinstance(numbers, tuple)
+
+# sorting and enumerating iterables
+for i, v in enumerate(sorted(veggies), start=1):
+    print(f'{i}. {v}')
+
+# saving memory
+veggies_iter = iter(veggies)
+numbers_iter = reversed(numbers)
+
+assert next(veggies_iter) == 'carrot'
+assert next(numbers_iter) != 2
+
+assert all(numbers) == False  # we have 0 there
+assert any(['', False, 0.0]) == False  # no True values at all
+
+assert max(numbers) == 150
+assert min(numbers) == 0
+
+sum(numbers)  # type-specific operations
+round(3.141592, 2)
+
+# some functions, such as pow() or divmod(), are easily replaced with
+# operators; others, such as map() or filter() — with comprehensions.
+
+# making a dict, using three built-in functions
+stock = dict(zip(veggies, range(10, 100, 10)))
