@@ -1,5 +1,5 @@
 """
-For common tasks Python offers a number of ready-to-use functions (and types 
+For common tasks Python offers a number of ready-to-use functions (and types
 that look very similar to functions). They're always available, and it's
 important to remember they exist.
 
@@ -57,8 +57,8 @@ numbers_iter = reversed(numbers)
 assert next(veggies_iter) == 'carrot'
 assert next(numbers_iter) != 2
 
-assert all(numbers) == False  # we have 0 there
-assert any(['', False, 0.0]) == False  # no True values at all
+assert all(numbers) is False  # we have 0 there
+assert any(['', False, 0.0]) is False  # no True values at all
 
 assert max(numbers) == 150
 assert min(numbers) == 0
