@@ -3,31 +3,27 @@ Generators are the way to create memory-efficient iterators.
 
 Generator needs to be initialized, and it keeps state between calls.
 All its data isn't loaded to memory all at once, and values are yielded
-on demand one at a time.
+on demand, one at a time.
 """
 
 
-def infinite_integers():
-    """Simple way to turn a regular function into a generator is to
-    replace return statement with yield.
+def infinite_cookies():
+    """Return cookies forever.
+
+    yield statement in place of return turns a simple function into generator.
+    In real world generators are much more useful :)
     """
-    num = 0
-
     while True:
-        yield num
-        num += 1  # lines after yield aren't skipped
+        yield 'cookie'
 
 
-# to use the generator, we need to initialize it and assign a variable to it
-nums = infinite_integers()
-type(nums)  # generator
-# to get values one at a time, use the next() built-in function
-next(nums)  # 0
-next(nums)  # 1
+cookies = infinite_cookies()
+type(cookies)  # generator
+# fetch values using next() builtin
+next(cookies)  # one at a time
+next(cookies)  # cookie yet again
 
 # another (more sugary) way to create generators — using generator expression
-# huh, just like much loved list compherensions
-finite_integers = (num for num in range(1000))
-next(finite_integers)
-
-# unlike generator in the first example, this one can be exhausted
+# huh, just like much loved list comprehensions
+finite_cookies = ('cookie' for _ in range(100))
+next(finite_cookies)
