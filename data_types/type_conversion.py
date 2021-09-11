@@ -24,7 +24,7 @@ assert isinstance('hey', str)  # recommended way of testing for type
 assert isinstance((777), int)
 
 
-### explicit conversion with built-in functions/classes
+# explicit conversion with built-in functions/classes
 
 prices = ['199.99', '49.99', '209.99']
 
@@ -36,7 +36,7 @@ except TypeError as e:
     assert sum(correct_prices)  # using sum() on objects of a correct type
 
 
-### these are available to initialize objects or convert types of existing ones
+# these are available to initialize objects or convert types of existing ones
 dict()
 float()
 int()
@@ -50,7 +50,7 @@ assert bool('Not True') is True
 assert next(iter(prices)) == '199.99'
 
 
-### implicit conversion is done automatically where it's possible
+# implicit conversion is done automatically where it's possible
 
 balance = 1200.04
 purchase = 299
@@ -58,7 +58,7 @@ balance -= purchase  # operations between int and float
 assert type(balance) is float
 
 
-### more examples
+# more examples
 
 colors = {'cyan': '#00ffff', 'magenta': '#ff00ff', 'yellow': '#ffff00'}
 assert list(colors) == list(colors.keys())

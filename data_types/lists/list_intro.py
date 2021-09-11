@@ -22,13 +22,13 @@ prices = [(i + 0.99) for i in range(20)]  # [x for x in iterable]
 groceries = ['cheese', 'eggs', 'bread', 'oats']
 
 # membership tests
-'apples' in groceries  # False
-assert 'oats' in groceries  # True
-assert 'butter' not in groceries  # True
+assert 'oats' in groceries
+assert 'apples' not in groceries
+assert 'butter' not in groceries
 
 # concatenation (joining) of lists
-groceries = groceries + veggies
-groceries += fruits  # augmented assignment does almost the same
+groceries = groceries + veggies  # we can do it thanks to operator overloading
+groceries += fruits  # augmented assignment does *almost* the same
 
 # accessing items by indexes and slicing
 groceries[0]  # first item in a list
@@ -43,6 +43,7 @@ len(groceries)
 # smallest and largest items
 min(prices)
 max(prices)
+assert min(groceries) == 'apples'
 
 # getting an index (position) of an item
 assert groceries.index('cheese') == 0

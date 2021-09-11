@@ -1,6 +1,11 @@
-# the most famous Python gotcha
-# default arguments in Python functions are evaluated on function definition.
-# solution: create a new object on each function call if nothing is passed.
+"""
+Behavior of mutable default arguments is the most famous Python gotcha.
+
+Default arguments in Python functions are evaluated on function definition,
+so if changed in a function, a mutable argument will accumulate changes 
+of every call.
+Solution: create a new object on each function call if nothing is passed.
+"""
 
 
 def do_this(task, todo_list=[]):

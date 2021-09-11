@@ -2,7 +2,7 @@
 Functions are useful reusable pieces of code created to do a specific task.
 
 They are defined (created) using *def* keyword following by a name.
-The name should be descriptive and short, staring with a verb, if possible.
+The name should be descriptive and short, starting with a verb, if possible.
 Then a function can be called (used) any number of times to do its task.
 
 Sometimes functions are compared to black boxes — they do their thing, but it's
@@ -29,7 +29,7 @@ def make_sound(sound='Bloop'):
     """
     print(sound)
     return sound
-    print('Whoosh')
+    print('Whoosh')  # unreachable
 
 
 if __name__ == '__main__':

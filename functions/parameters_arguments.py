@@ -52,7 +52,7 @@ def collect_info(first_name, last_name, house=None, patronus=None):
     """
     When more information needed, order of arguments is harder to remember.
 
-    And some pieces of information may not be mandatory. 
+    And some pieces of information may not be mandatory.
     In this case keyword arguments come in handy.
     They are expected (opposite to arbitrary **kwargs) but not required.
     """

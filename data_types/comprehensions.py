@@ -18,6 +18,7 @@ import os
 import string
 import types
 
+
 # comprehension is the best way to initiate a list
 years = [i for i in range(1900, 2021)]
 assert 1969 in years
@@ -45,8 +46,8 @@ assert filtered_names == ['Harry', 'Hermione']
 # variables is safe comparing to loops
 try:
     assert i
-except NameError as e:
-    print(e)
+except NameError:
+    pass  # name 'i' is not defined
 
 
 # dicts
@@ -87,7 +88,7 @@ try:
         for i in os.listdir(base)
         if i.endswith('.pdf') and os.path.isfile(os.path.join(base, i))
     ]
-except FileNotFoundError as e:  #
+except FileNotFoundError:
     pass
 
 

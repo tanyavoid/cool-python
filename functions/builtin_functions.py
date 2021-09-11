@@ -4,7 +4,7 @@ that look very similar to functions). They're always available, and it's
 important to remember they exist.
 
 Also, it's crucial not to give your functions names of the built-ins to avoid
-unexpected behaviours.
+unexpected behaviors.
 """
 
 import builtins
@@ -20,8 +20,8 @@ builtin_function_names = [
 assert 'hex' in builtin_function_names
 assert 'open' in builtin_function_names
 
-print(builtin_function_names)  # everyone's favourite function!
-dir()  # wants to be everyone's favourite
+print(builtin_function_names)  # everyone's favorite function :)
+dir()  # wants to be everyone's favorite
 
 # a good portion of the builtins is devoted to type conversion
 # or initializing empty values of these types (just assign variables to them)
